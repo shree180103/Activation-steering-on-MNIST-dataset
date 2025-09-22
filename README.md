@@ -15,3 +15,5 @@ The steps for actiavtion steering:
 # why activations and not features ?
 
 <img width="724" height="724" alt="image" src="https://github.com/user-attachments/assets/e0f9acd7-9c6d-4107-a299-d09f7f64f613" />
+
+One neuron may encode multiple features. Thus, a neural network can represent more features than it has neurons. This implies that the feature space is higher-dimensional than the activation space. Each feature in this higher-dimensional space corresponds to a direction in the activation space. Therefore, we can treat activations as vectors that represent feature directions. By modifying these activations (and hence the directions), we can change the features represented within the neural network.
