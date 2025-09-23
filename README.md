@@ -11,6 +11,7 @@ The steps for actiavtion steering:
 - Add the vector to the activation during the forward pass, i.e ϕ(l)(steered)=ϕ(l)+v
 - you can also normalize it or multiply it with some scalar c to control the strength of the activation addition like ϕ(l)(steered)=ϕ(l)+c.v
 
+In this repository I have trained a shallow neural network to classify numbers 0-7 of the MNIST dataset, and activation steered the model to classify numbers 8 and 9, while still retaining the model's learned capabilities. 
 
 # why activations and not features ?
 
@@ -23,11 +24,14 @@ One neuron may encode multiple features. Thus, a neural network can represent mo
 # Experiments
 
 1. Cross Activation steering
-Here we take data A and data B which is trained on model A and model B respectively (model A and B have the same design). Then we compute mean of actiavtions at each layer l for both models. after that we compute the differece between the activations therefore we get steering vectors at each layer l is. Finally, we add the steered vectors to the initial activations to get our steered model.
+Here we take data A and data B which is trained on model A and model B respectively (model A and B have the same design). Then we compute mean of actiavtions at each layer l for both models. after that we compute the differece between the activations therefore we get steering vectors at each layer l is. Finally, we add the steered vectors to the initial activations of model A to get our steered model. This steered model can predict for data B even though it was no trained on it .
 
+orange is the steered model's activations / blue is model A activations 
+<img width="680" height="648" alt="image" src="https://github.com/user-attachments/assets/d5654d3e-458f-4144-8f13-c0c0cbdb6bfd" />
 
+problems with cross actiavtion steering - Though the model A and B have simillar design, they are trained on different data ( data A - numbers 0-8 and data B- number 9 ) thus even though activation dimension in the the smae and they may lie in different activation subspaces of the saame plane.thus in order to steer the model A towards predicting 9, we will require a large control value which will remove models previoulsy 
    
-3. Self activation steering
+3. Self activation steering with capability retention
 4. Multi steer activation steering
-5. self activation Steering with capability retention
+5. Improving self activation Steering with capability retention via noise injection in dataset
    
