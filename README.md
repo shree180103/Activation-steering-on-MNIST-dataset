@@ -48,6 +48,14 @@ problems with cross actiavtion steering - Though the model A and B have simillar
    
    We improve the model accuracy by training model A on data A with gaussian noise applied on each image. This makes model more robust and the model can retain learnned capabilities better.
 
+   <img width="594" height="577" alt="image" src="https://github.com/user-attachments/assets/e7020f64-0eba-4d86-a13f-eae25ae4ea6f" />
+
+   <img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/9894aa16-8468-480d-88d7-65aad7acd39e" />
+
+   <img width="1341" height="779" alt="image" src="https://github.com/user-attachments/assets/678ea38a-f0fd-4c9c-b89a-07d012d59668" />
+
+
+
    accuracy - 90% on train and 89% on cross validation.
 
 # Futhter experiments 
