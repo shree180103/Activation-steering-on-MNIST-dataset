@@ -23,7 +23,11 @@ One neuron may encode multiple features. Thus, a neural network can represent mo
 # Experiments
 
 1. Cross Activation steering
-2. Self activation steering
-3. Multi steer activation steering
-4. self activation Steering with capability retention
+Here we take data A and data B which is trained on model A and model B respectively (model A and B have the same design). Then we compute mean of actiavtions at each layer l for both models. after that we compute the differece between the activations therefore we get steering vectors at each layer l is. Finally, we add the steered vectors to the initial activations to get our steered model.
+
+
+   
+3. Self activation steering
+4. Multi steer activation steering
+5. self activation Steering with capability retention
    
