@@ -40,7 +40,19 @@ problems with cross actiavtion steering - Though the model A and B have simillar
 <img width="680" height="648" alt="image" src="https://github.com/user-attachments/assets/d5654d3e-458f-4144-8f13-c0c0cbdb6bfd" />
 
    problems - the accuracy of the model reduces as the steered activations affect the inintial activations greatly due to the model A not being robust to high change in activation space.
+              this is also bbecaause the model A requires a large control value to steer the model towards 9.
+
+   accuracy- 65% on train and 63% cross validation 
     
-5. Multi steer activation steering
-6. Improving self activation steering with capability retention via noise injection in dataset
+5. Improving self activation steering with capability retention via noise injection in dataset
+   
+   We improve the model accuracy by training model A on data A with gaussian noise applied on each image. This makes model more robust and the model can retain learnned capabilities better.
+
+   accuracy - 90% on train and 89% on cross validation.
+
+# Futhter experiments 
+
+We are workinng on multi steer activation steering and anim to improve accuracy. Also we are investigating  if this has to do witth the robustness of a model or the models uncertaininty. 
+
+
    
