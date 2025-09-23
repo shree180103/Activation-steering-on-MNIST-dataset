@@ -29,9 +29,14 @@ Here we take data A and data B which is trained on model A and model B respectiv
 orange is the steered model's activations / blue is model A activations 
 <img width="680" height="648" alt="image" src="https://github.com/user-attachments/assets/d5654d3e-458f-4144-8f13-c0c0cbdb6bfd" />
 
-problems with cross actiavtion steering - Though the model A and B have simillar design, they are trained on different data ( data A - numbers 0-8 and data B- number 9 ) thus even though activation dimension in the the smae and they may lie in different activation subspaces of the saame plane.thus in order to steer the model A towards predicting 9, we will require a large control value which will remove models previoulsy 
+problems with cross actiavtion steering - Though the model A and B have simillar design, they are trained on different data ( data A - numbers 0-8 and data B- number 9 ). Thus even though activation dimension is the same, they may lie in different activation subspaces of the same plane. Thus in steering the model A to predict 9, we end up removing the models previous capabilities. 
    
 3. Self activation steering with capability retention
-4. Multi steer activation steering
-5. Improving self activation Steering with capability retention via noise injection in dataset
+   Here we take data A and data B, where only data A is used to train model A and data B is the desired data we want the model to predict correctly. After training model A on data A we compute model A activations for data A and then we
+   do the same for model A actiavtions for data B ( or no. 9 . Thus we get mmodel activations for data A and data and data B which we then compute mean at each layer l and then find their difference to get steering vectors or steering        activations. then we use this to steer model A to predict for data B while still keeping its capabilities of predicting for model A.
+
+   problems - the accuracy of the model reduces as the steered activations affect the inintial activations greatly due to the model A not being robust to high change in activation space.
+    
+5. Multi steer activation steering
+6. Improving self activation steering with capability retention via noise injection in dataset
    
