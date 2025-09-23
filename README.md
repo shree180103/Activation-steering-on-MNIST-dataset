@@ -27,13 +27,17 @@ One neuron may encode multiple features. Thus, a neural network can represent mo
 Here we take data A and data B which is trained on model A and model B respectively (model A and B have the same design). Then we compute mean of actiavtions at each layer l for both models. after that we compute the differece between the activations therefore we get steering vectors at each layer l is. Finally, we add the steered vectors to the initial activations of model A to get our steered model. This steered model can predict for data B even though it was no trained on it .
 
 orange is the steered model's activations / blue is model A activations 
-<img width="680" height="648" alt="image" src="https://github.com/user-attachments/assets/d5654d3e-458f-4144-8f13-c0c0cbdb6bfd" />
+<img width="609" height="583" alt="image" src="https://github.com/user-attachments/assets/6f58117b-f546-4949-9743-a284495ba6e8" />
+
 
 problems with cross actiavtion steering - Though the model A and B have simillar design, they are trained on different data ( data A - numbers 0-8 and data B- number 9 ). Thus even though activation dimension is the same, they may lie in different activation subspaces of the same plane. Thus in steering the model A to predict 9, we end up removing the models previous capabilities. 
    
 3. Self activation steering with capability retention
    Here we take data A and data B, where only data A is used to train model A and data B is the desired data we want the model to predict correctly. After training model A on data A we compute model A activations for data A and then we
    do the same for model A actiavtions for data B ( or no. 9 . Thus we get mmodel activations for data A and data and data B which we then compute mean at each layer l and then find their difference to get steering vectors or steering        activations. then we use this to steer model A to predict for data B while still keeping its capabilities of predicting for model A.
+
+    orange is the steered model's activations / blue is model A activations 
+<img width="680" height="648" alt="image" src="https://github.com/user-attachments/assets/d5654d3e-458f-4144-8f13-c0c0cbdb6bfd" />
 
    problems - the accuracy of the model reduces as the steered activations affect the inintial activations greatly due to the model A not being robust to high change in activation space.
     
