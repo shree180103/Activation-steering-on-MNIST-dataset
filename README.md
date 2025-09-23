@@ -60,7 +60,7 @@ problems with cross actiavtion steering - Though the model A and B have simillar
 
 # Futhter experiments 
 
-We are workinng on multi steer activation steering and aim to improve accuracy. Also we are investigating if thE improve in accuracy has to do with the robustness of a model or the models uncertaininty. 
+We are workinng on multi steer activation steering and aim to improve accuracy. Also we are investigating if the improve in accuracy has to do with the robustness of a model or the models uncertaininty. 
 
 
    
