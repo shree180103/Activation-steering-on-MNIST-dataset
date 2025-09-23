@@ -6,8 +6,8 @@ Activation steering is a technique used in interpretability and model editing wh
 
 The steps for actiavtion steering:
 
-- Decide on a layer l and transformer module ϕ to apply the activation steering to.
-- Define a steering vector v. In the simplest case we just take the difference of the activations
+- Decide on a layer l of the model with actiations ϕ to apply the activation steering to.
+- Define a steering vector v. In the simplest case we just take the difference of the activations. This can be self or cross model activations.
 - Add the vector to the activation during the forward pass, i.e ϕ(l)(steered)=ϕ(l)+v
 - you can also normalize it or multiply it with some scalar c to control the strength of the activation addition like ϕ(l)(steered)=ϕ(l)+c.v
 
@@ -20,4 +20,10 @@ The steps for actiavtion steering:
 
 One neuron may encode multiple features. Thus, a neural network can represent more features than it has neurons. This implies that the feature space is higher-dimensional than the activation space. Each feature in this higher-dimensional space corresponds to a direction in the activation space. Therefore, we can treat activations as vectors that represent feature directions. By modifying these activations (and hence the directions), we can change the features represented within the neural network.
 
+# Experiments
 
+1. Cross Activation steering
+2. Self activation steering
+3. Multi steer activation steering
+4. self activation Steering with capability retention
+   
